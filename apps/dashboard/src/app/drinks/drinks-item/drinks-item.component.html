@@ -1,0 +1,21 @@
+<div class="d-flex justify-content-center mt-3">
+  <button mat-button [routerLink]="['/drinks']">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  <mat-card class="col-6" *ngIf="drinks$ | async as drink">
+    <mat-card-header class="align-self-center">
+      <mat-card-title>
+        <h3 mat-line>Drink Id</h3>
+        <p>{{drink.id}}</p>
+        <h3 mat-line>Drink Title</h3>
+        <p>{{drink.title}}</p>
+        <h3 mat-line>Drink Caffeine Amount</h3>
+        <p>{{drink.caffeine}}</p>
+        <h3 mat-line>Drink Founder</h3>
+        <p>{{drink.founder}}</p>
+        <h3 mat-line>Drink Sugar Amount</h3>
+        <p>{{drink.sugar}}</p>
+      </mat-card-title>
+    </mat-card-header>
+  </mat-card>
+</div>
